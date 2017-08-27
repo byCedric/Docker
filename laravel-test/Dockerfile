@@ -1,11 +1,13 @@
+# Use the multi-stage feature to import Composer securely
+FROM composer
 # Use PHP as primary language
-FROM php:7
+FROM php
 
 # Suppress the do-not-run-as-root warning from composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # Add Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+COPY --from=composer /usr/bin/composer /usr/bin/composer
 # Add Node 8 LTS
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash --
 
