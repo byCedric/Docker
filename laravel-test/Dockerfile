@@ -16,6 +16,7 @@ RUN apt-get update \
 	&& apt-get upgrade -y \
 	&& apt-get install -y \
 		git \
+		libpng-dev \
 		libsqlite3-dev \
 		nodejs \
 		unzip \
