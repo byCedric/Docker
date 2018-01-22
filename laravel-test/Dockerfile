@@ -1,15 +1,7 @@
 # Use the multi-stage feature to import Composer securely
 FROM composer
 # Use PHP as primary language
-FROM php
-
-# Suppress the do-not-run-as-root warning from composer
-ENV COMPOSER_ALLOW_SUPERUSER 1
-
-# Add Composer
-COPY --from=composer /usr/bin/composer /usr/bin/composer
-# Add Node 8 LTS
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash --
+FROM php:7.1
 
 # Update, upgrade and install some dependencies
 RUN apt-get update \
@@ -18,7 +10,6 @@ RUN apt-get update \
 		git \
 		libpng-dev \
 		libsqlite3-dev \
-		nodejs \
 		unzip \
 	&& apt-get autoremove -y
 
@@ -29,6 +20,17 @@ RUN docker-php-ext-install \
 # Install and enable xdebug
 RUN pecl install xdebug \
 	&& docker-php-ext-enable xdebug
+
+# Add Node 8 LTS
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -- \
+	&& apt-get install -y nodejs \
+	&& apt-get autoremove -y
+
+# Add Composer
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+
+# Suppress the do-not-run-as-root warning from composer
+ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # Show the versions of PHP, Node, Composer and NPM
 CMD \
