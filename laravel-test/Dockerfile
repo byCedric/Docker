@@ -1,13 +1,14 @@
 # Use the multi-stage feature to import Composer securely
-FROM composer
+FROM composer:1.6
 # Use PHP as primary language
-FROM php:7.1
+FROM php:7.2
 
 # Update, upgrade and install some dependencies
 RUN apt-get update \
 	&& apt-get upgrade -y \
 	&& apt-get install -y \
 		git \
+		gnupg \
 		libpng-dev \
 		libsqlite3-dev \
 		unzip \
