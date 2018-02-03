@@ -1,4 +1,4 @@
-FROM nginx:alpine-perl
+FROM nginx:alpine
 
 LABEL maintainer Cedric van Putten <me@bycedric.com>
 
