@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<title>Docker byCedric/Serve</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+		<style>
+			.welcome-wrapper {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				height: 100vh;
+			}
+
+			.welcome {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				font-family: 'Noto Sans', sans-serif;
+				color: #333;
+			}
+
+			.welcome__name,
+			.welcome__description {
+				margin: 0;
+				padding: 1rem;
+			}
+
+			.welcome__name {
+				border-right: 1px solid #eee;
+				text-align: right;
+			}
+
+			.welcome__description {
+				display: block;
+				text-decoration: none;
+				color: inherit;
+			}
+
+			.welcome__description:hover {
+				text-decoration: underline;
+			}
+
+			@media (max-width: 425px) {
+				.welcome {
+					flex-direction: column;
+				}
+
+				.welcome__name {
+					border-right: none;
+					border-bottom: 1px solid #eee;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main class="welcome-wrapper">
+			<section class="welcome">
+				<h1 class="welcome__name">Sweet</h1>
+				<a class="welcome__description" href="https://github.com/bycedric/docker/tree/master/serve">You got it working</a>
+			</section>
+		</main>
+		<script>
+			(function () {
+				const $name = document.getElementsByClassName('welcome__name')[0];
+				const $description = document.getElementsByClassName('welcome__description')[0];
+
+				const render = (content) => {
+					if ($name && content.name) {
+						$name.innerHTML = content.name;
+					}
+
+					if ($description && content.description) {
+						$description.innerHTML = content.description;
+					}
+				};
+
+				const welcomes = [
+					{ name: 'Sweet', description: 'You got it working' },
+					{ name: 'Nice', description: 'But your project will look better up here' },
+					{ name: 'Great', description: 'You got this far, why stop now' },
+					{ name: 'Roses are red<br /> Violets are blue', description: 'Now go deploy a site or two' },
+				];
+
+				render(welcomes[Math.floor(Math.random() * welcomes.length)]);
+			})();
+		</script>
+	</body>
+</html>
