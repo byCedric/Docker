@@ -24,15 +24,12 @@ COPY index.html /var/www/http/index.html
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx-http.conf /etc/nginx/conf.d/sites-template/http.conf
 COPY nginx-site.sh /usr/sbin/ngxsite
-COPY nginx-start.sh /usr/sbin/ngxstart
 
-RUN chmod +x \
-	/usr/sbin/ngxsite \
-	/usr/sbin/ngxstart
+RUN chmod +x /usr/sbin/ngxsite
 
 ENV SERVER_FILE='index.html' \
 	SERVER_NAME='_' \
 	SERVER_ROOT='/var/www/http' \
 	TEMPLATE_VARIABLES='$SERVER_FILE $SERVER_NAME $SERVER_ROOT'
 
-CMD ["ngxstart"]
+CMD ["sh", "-c", "ngxsite template http && ngxsite enable http && nginx -g 'daemon off;'"]
