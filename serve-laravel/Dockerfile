@@ -10,7 +10,6 @@ RUN apk add --no-cache \
 	php7-mbstring \
 	php7-openssl \
 	php7-pdo \
-	php7-pdo \
 	php7-pdo-mysql \
 	php7-pdo-sqlite \
 	php7-session \
