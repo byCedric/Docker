@@ -17,8 +17,9 @@ RUN apk add --no-cache \
 	php7-xml \
 	supervisor
 
-COPY ./supervisord.conf /etc/supervisord.conf
 COPY ./nginx-laravel.conf /etc/nginx/conf.d/sites-template/laravel.conf
+COPY ./php-fpm.conf /etc/php7/php-fpm.d/www.conf
+COPY ./supervisord.conf /etc/supervisord.conf
 
 ENV SERVER_FILE 'index.php'
 
