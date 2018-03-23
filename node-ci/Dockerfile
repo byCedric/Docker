@@ -1,2 +1,4 @@
 FROM node:alpine
-RUN npm install -g npm@latest && rm -r ~/.npm
+RUN apk add --no-cache git \
+	&& npm install -g npm@latest \
+	&& rm -r ~/.npm
