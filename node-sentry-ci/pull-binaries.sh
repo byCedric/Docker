@@ -9,7 +9,7 @@ for tag in "${versions[@]}"
 do
 	docker pull getsentry/sentry-cli:$tag;
 	container=$(docker create getsentry/sentry-cli:$tag);
-	mkdir -p "./cdn/${tag}/sentry-cli";
-	docker cp $container:/bin/sentry-cli cdn/$tag/sentry-cli/sentry-cli-Linux-x86_64;
+	mkdir -p "./cdn/${tag}";
+	docker cp $container:/bin/sentry-cli cdn/$tag/sentry-cli-Linux-x86_64;
 	echo "${tag} done!";
 done
