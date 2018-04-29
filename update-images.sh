@@ -2,7 +2,7 @@
 branches=("develop" "master")
 tags=("develop" "latest")
 
-images=(
+folders=(
 	"node-ci"
 	"node-sentry-ci"
 	"serve"
@@ -11,19 +11,20 @@ images=(
 	"laravel-test"
 )
 
-for image in "${images[@]}"
+for folder in "${folders[@]}"
 do
 	for i in "${!branches[@]}"
 	do
 		branch=${branches[$i]};
 		tag=${tags[$i]};
+		image="bycedric/${folder}:${tag}"
 
-		echo "preparing ${image}:${tag}";
+		echo "preparing ${image}";
 
 		git checkout $branch;
-		cd $image;
-		docker build . -t $image:$tag;
-		docker push $image:$tag;
+		cd $folder;
+		docker build . -t $image;
+		docker push $image;
 		cd ..;
 
 		echo "done!";
