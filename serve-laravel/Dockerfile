@@ -5,6 +5,7 @@ LABEL maintainer 'Cedric van Putten <me@bycedric.com>'
 RUN apk add --no-cache \
 	php7 \
 	php7-ctype \
+	php7-dom \
 	php7-fpm \
 	php7-json \
 	php7-mbstring \
