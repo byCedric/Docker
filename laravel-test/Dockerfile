@@ -27,6 +27,10 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -- \
 	&& apt-get install -y nodejs \
 	&& apt-get autoremove -y
 
+# Update NPM to the latest version
+RUN npm install -g npm@latest \
+	&& rm -r ~/.npm
+
 # Add Composer
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
