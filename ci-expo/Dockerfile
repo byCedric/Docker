@@ -9,6 +9,5 @@ RUN apk add --no-cache \
 	&& npm install -g \
 		expo-cli \
 		npm \
-		sonarqube-scanner \
 	&& npm set progress=false \
 	&& npm cache rm --force
