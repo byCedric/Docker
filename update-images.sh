@@ -3,8 +3,7 @@ branches=("develop" "master")
 tags=("develop" "latest")
 
 folders=(
-	"node-ci"
-	"node-sentry-ci"
+	"ci-expo"
 	"serve"
 	"serve-webapp"
 	"serve-laravel"
