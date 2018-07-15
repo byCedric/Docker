@@ -1,7 +1,6 @@
 # Expo - Continuous Integration
 
-A simple Node image based on Alpine Linux, ready for usage in CI.
-This image is build to run specifically for Expo projects.
+A simple Node image based on Alpine Linux, for Expo projects in CI/CD environments.
 
 ## Dependencies
 
