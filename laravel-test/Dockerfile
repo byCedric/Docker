@@ -17,7 +17,8 @@ RUN apt-get update \
 # Install additional required PHP extensions
 RUN docker-php-ext-install \
 	gd \
-	pdo_sqlite
+	pdo_sqlite \
+	zip
 
 # Install and enable xdebug
 RUN pecl install xdebug \
