@@ -1,28 +1,15 @@
 ---
 sudo: required
 language: node_js
-
 node_js:
   - node
-
 services:
   - docker
-
+before_install:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 jobs:
   include:
-    - stage: Build images
-      name: Continious Integration (ci)
-      script: node ./scripts/docker-build ci --no-warnings
-    - stage: Build images
-      name: NGiNX Serving (serve)
-      script: node ./scripts/docker-build serve --no-warnings
-    - stage: Push images
-      name: Continious Integration (ci)
-      script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - node ./scripts/docker-push ci --no-warnings
-    - stage: Push images
-      name: NGiNX Serving (serve)
-      script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - node ./scripts/docker-push serve --no-warnings
+    - stage: Updating ci images
+      script: ./scripts/docker-build ci
+    - stage: Updating serve images
+      script: ./scripts/docker-build serve

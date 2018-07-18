@@ -3,10 +3,10 @@ branches=("develop" "master")
 tags=("develop" "latest")
 
 folders=(
-	"ci-expo"
-	"serve"
-	"serve-webapp"
-	"serve-laravel"
+	# "ci-expo"
+	# "serve"
+	# "serve-webapp"
+	# "serve-laravel"
 	"laravel-test"
 )
 
