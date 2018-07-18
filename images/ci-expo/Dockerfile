@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM bycedric/ci-node
 
 RUN apk add --no-cache \
 		# for React Native bundler (Metro)
@@ -6,8 +6,5 @@ RUN apk add --no-cache \
 		# for Semantic Release (Git over SSH)
 		git \
 		openssh-client \
-	&& npm install -g \
-		expo-cli \
-		npm \
-	&& npm set progress=false \
+	&& npm install -g expo-cli@latest \
 	&& npm cache rm --force

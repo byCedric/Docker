@@ -12,4 +12,4 @@ A simple Node image based on Alpine Linux, for Expo projects in CI/CD environmen
 
 - All dependencies are installed and updated within a single `RUN` statement to avoid intermediate containers.
 - Both `apk` and `npm` caches are removed or turned off to avoid large build images.
-- `npm` progression feedback is turned off to [speed up the installation](https://gist.github.com/GavinJoyce/4f81d0bf879dad6b203e).
+- See `ci-node` for all other tweaks.
