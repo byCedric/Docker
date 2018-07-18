@@ -1,4 +1,19 @@
-#  (2018-07-18)
+## [1.0.1](https://github.com/bycedric/docker/compare/1.0.0...1.0.1) (2018-07-18)
+
+
+### New features
+
+* **ci-node:** add node ci image with performance tweaks ([b90c9c9](https://github.com/bycedric/docker/commit/b90c9c9))
+
+
+### Other chores
+
+* add changelog and bump version number ([0498e7d](https://github.com/bycedric/docker/commit/0498e7d))
+
+
+### Pipeline changes
+
+* improve travis branch naming ([c295526](https://github.com/bycedric/docker/commit/c295526))
 
 
 
