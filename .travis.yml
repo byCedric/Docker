@@ -1,0 +1,22 @@
+---
+sudo: required
+language: node_js
+
+node_js:
+  - node
+
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: Build images
+      script: node ./scripts/docker-build ci --no-warnings
+    - script: node ./scripts/docker-build serve --no-warnings
+    - stage: Push images
+      script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - node ./scripts/docker-push ci --no-warnings
+    - script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - node ./scripts/docker-push serve --no-warnings
