@@ -9,7 +9,9 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 jobs:
   include:
-    - stage: Updating ci images
+    - stage: Build images
+      name: ci images
       script: ./scripts/docker-build ci
-    - stage: Updating serve images
+    - stage: Build images
+      name: serve images
       script: ./scripts/docker-build serve
