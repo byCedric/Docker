@@ -20,7 +20,7 @@ const program = async (batch) => {
 	const dockerTags = [
 		process.env.TRAVIS_COMMIT && process.env.TRAVIS_COMMIT.substring(0, 7),
 		process.env.TRAVIS_TAG,
-		branchToTag[process.env.TRAVIS_BRANCH],
+		branchToTag[process.env.BRANCH],
 	].filter(name => !!name);
 
 	spinner.stop();
