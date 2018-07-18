@@ -19,7 +19,7 @@ const program = async (batch) => {
 	const dockerImages = await findImages(batch, ['ci-node', 'serve']);
 	const dockerTags = [
 		process.env.TRAVIS_COMMIT,
-		process.env.TRAVIS_TAG,
+		process.env.TRAVIS_TAG && process.env.TRAVIS_TAG.substring(0, 7),
 		branchToTag[process.env.TRAVIS_BRANCH],
 	].filter(name => !!name);
 
