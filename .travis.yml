@@ -11,12 +11,18 @@ services:
 jobs:
   include:
     - stage: Build images
+      name: Continious Integration (ci)
       script: node ./scripts/docker-build ci --no-warnings
-    - script: node ./scripts/docker-build serve --no-warnings
+    - stage: Build images
+      name: NGiNX Serving (serve)
+      script: node ./scripts/docker-build serve --no-warnings
     - stage: Push images
+      name: Continious Integration (ci)
       script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - node ./scripts/docker-push ci --no-warnings
-    - script:
+    - stage: Push images
+      name: NGiNX Serving (serve)
+      script:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - node ./scripts/docker-push serve --no-warnings

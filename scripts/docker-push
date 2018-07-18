@@ -9,9 +9,9 @@ const { findImages, pushImage } = require('./util-docker');
 const { logInfo, logError } = require('./util-output');
 
 const dockerTags = [
-	TRAVIS_COMMIT,
-	TRAVIS_TAG,
-	TRAVIS_BRANCH === 'master' ? 'latest' : TRAVIS_BRANCH,
+	process.env.TRAVIS_COMMIT,
+	process.env.TRAVIS_TAG,
+	process.env.TRAVIS_BRANCH === 'master' ? 'latest' : process.env.TRAVIS_BRANCH,
 ];
 
 const spinner = ora();
