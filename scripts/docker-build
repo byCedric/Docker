@@ -7,6 +7,11 @@ const ora = require('ora');
 const { findImages, buildImage, pushImage } = require('./util-docker');
 const { logInfo, logError } = require('./util-output');
 
+const branchToTag = {
+	develop: 'develop',
+	master: 'latest',
+};
+
 const spinner = ora();
 const program = async (batch) => {
 	spinner.start('Searching docker images');
@@ -15,8 +20,8 @@ const program = async (batch) => {
 	const dockerTags = [
 		process.env.TRAVIS_COMMIT,
 		process.env.TRAVIS_TAG,
-		process.env.TRAVIS_BRANCH === 'master' ? 'latest' : process.env.TRAVIS_BRANCH,
-	];
+		branchToTag[process.env.TRAVIS_BRANCH],
+	].filter(name => !!name);
 
 	spinner.stop();
 	logInfo(
