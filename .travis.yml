@@ -17,3 +17,6 @@ jobs:
     - stage: Build images
       name: serve
       script: ./scripts/docker-build serve
+    - stage: Build images
+      name: laravel
+      script: ./scripts/docker-build laravel
