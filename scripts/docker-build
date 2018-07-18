@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+'use strict';
+
+const chalk = require('chalk');
+const ora = require('ora');
+
+const { findImages, buildImage } = require('./util-docker');
+const { logInfo, logError } = require('./util-output');
+
+const spinner = ora();
+const program = async (batch) => {
+	spinner.start('Searching docker images');
+
+	const dockerImages = await findImages(batch, [
+		'ci-node',
+		'serve',
+	]);
+
+	spinner.stop();
+	logInfo(
+		chalk`Found {bold ${dockerImages.length} images}`,
+		...dockerImages.map(
+			(image, index) => chalk`  {dim ${index + 1}. {underline ${image.name}}}`
+		)
+	);
+
+	for (const image of dockerImages) {
+		spinner.start(chalk`Building {bold ${image.name}}...`);
+		await buildImage(image);
+		spinner.succeed(chalk`Built {bold ${image.name}}`);
+	}
+};
+
+program(process.argv[2])
+	.then(status => process.exit(status))
+	.catch(error => {
+		spinner.stop();
+		logError(error);
+		process.exit(1);
+	});
