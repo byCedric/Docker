@@ -10,8 +10,8 @@ before_install:
 jobs:
   include:
     - stage: Build images
-      name: ci images
+      name: ci
       script: ./scripts/docker-build ci
     - stage: Build images
-      name: serve images
+      name: serve
       script: ./scripts/docker-build serve
