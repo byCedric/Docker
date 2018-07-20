@@ -1,3 +1,17 @@
+## [1.0.5](https://github.com/bycedric/docker/compare/1.0.4...1.0.5) (2018-07-20)
+
+
+### Bug fixes
+
+* **serve-laravel:** explicitly mark supervisor as root user ([bf4356d](https://github.com/bycedric/docker/commit/bf4356d))
+
+
+### Other chores
+
+* update changelog and version ([c57df9f](https://github.com/bycedric/docker/commit/c57df9f))
+
+
+
 ## [1.0.4](https://github.com/bycedric/docker/compare/1.0.3...1.0.4) (2018-07-20)
 
 
