@@ -1,3 +1,17 @@
+## [1.0.2](https://github.com/bycedric/docker/compare/1.0.1...1.0.2) (2018-07-20)
+
+
+### Bug fixes
+
+* **serve-laravel:** add fileinfo extension for uploads ([7e18026](https://github.com/bycedric/docker/commit/7e18026))
+
+
+### Pipeline changes
+
+* add laravel test image to travis ([142bc7d](https://github.com/bycedric/docker/commit/142bc7d))
+
+
+
 ## [1.0.1](https://github.com/bycedric/docker/compare/1.0.0...1.0.1) (2018-07-18)
 
 
@@ -9,6 +23,7 @@
 ### Other chores
 
 * add changelog and bump version number ([0498e7d](https://github.com/bycedric/docker/commit/0498e7d))
+* update changelog with new `ci-node` ([c9d3ce6](https://github.com/bycedric/docker/commit/c9d3ce6))
 
 
 ### Pipeline changes
