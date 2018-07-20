@@ -6,6 +6,7 @@ RUN apk add --no-cache \
 	php7 \
 	php7-ctype \
 	php7-dom \
+	php7-fileinfo \
 	php7-fpm \
 	php7-iconv \
 	php7-json \
