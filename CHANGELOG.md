@@ -1,3 +1,17 @@
+## [1.0.4](https://github.com/bycedric/docker/compare/1.0.3...1.0.4) (2018-07-20)
+
+
+### Bug fixes
+
+* **serve-laravel:** add curl for server to server communication ([111a597](https://github.com/bycedric/docker/commit/111a597))
+
+
+### Other chores
+
+* update changelog and version ([28000f6](https://github.com/bycedric/docker/commit/28000f6))
+
+
+
 ## [1.0.3](https://github.com/bycedric/docker/compare/1.0.2...1.0.3) (2018-07-20)
 
 
