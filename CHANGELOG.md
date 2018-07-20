@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/bycedric/docker/compare/1.0.2...1.0.3) (2018-07-20)
+
+
+### Other chores
+
+* update changelog and version ([206237e](https://github.com/bycedric/docker/commit/206237e))
+
+
+
 ## [1.0.2](https://github.com/bycedric/docker/compare/1.0.1...1.0.2) (2018-07-20)
 
 
