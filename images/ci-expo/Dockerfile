@@ -1,5 +1,7 @@
 FROM bycedric/ci-node
 
+LABEL maintainer 'Cedric van Putten <me@bycedric.com>'
+
 RUN apk add --no-cache \
 		# for React Native bundler (Metro)
 		bash \
