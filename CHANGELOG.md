@@ -1,3 +1,32 @@
+# [1.1.0](https://github.com/bycedric/docker/compare/1.0.5...1.1.0) (2018-07-30)
+
+
+### Bug fixes
+
+* add missing maintainer labels to ci images ([184f064](https://github.com/bycedric/docker/commit/184f064))
+
+
+### Code style changes
+
+* **ci-sonarcloud:** start with ampersand instead of end ([8830004](https://github.com/bycedric/docker/commit/8830004))
+
+
+### Documentation changes
+
+* add travis build badge to readme ([a27a13b](https://github.com/bycedric/docker/commit/a27a13b))
+
+
+### New features
+
+* **ci-sonarcloud:** add basic image for sonarcloud scans ([c16c6c4](https://github.com/bycedric/docker/commit/c16c6c4))
+
+
+### Other chores
+
+* update changelog and version ([b0d7168](https://github.com/bycedric/docker/commit/b0d7168))
+
+
+
 ## [1.0.5](https://github.com/bycedric/docker/compare/1.0.4...1.0.5) (2018-07-20)
 
 
