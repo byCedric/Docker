@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/bycedric/docker/compare/1.1.0...1.2.0) (2018-08-02)
+
+
+### New features
+
+* **ci-sonarcloud:** add node support for sonarcloud scanners ([53cc8f1](https://github.com/bycedric/docker/commit/53cc8f1))
+
+
+### Other chores
+
+* update changelog and version ([f5c7c48](https://github.com/bycedric/docker/commit/f5c7c48))
+
+
+
 # [1.1.0](https://github.com/bycedric/docker/compare/1.0.5...1.1.0) (2018-07-30)
 
 
