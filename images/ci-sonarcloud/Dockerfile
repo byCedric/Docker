@@ -11,4 +11,7 @@ RUN apk add --no-cache nodejs wget \
     && cd /usr/bin && ln -s /sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner sonar-scanner \
     && apk del wget
 
+COPY sonar-bitbucket.sh /usr/sbin/sonar-bitbucket
+RUN chmod +x /usr/sbin/sonar-bitbucket
+
 CMD ["sh", "-c", "sonar-scanner -Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_TOKEN"]
