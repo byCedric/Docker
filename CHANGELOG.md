@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/bycedric/docker/compare/1.2.0...1.3.0) (2018-08-05)
+
+
+### New features
+
+* **ci-sonarcloud:** add bitbucket pipelines run script for sonarcloud ([ce1fc92](https://github.com/bycedric/docker/commit/ce1fc92))
+
+
+### Other chores
+
+* update changelog and version ([7a9f987](https://github.com/bycedric/docker/commit/7a9f987))
+
+
+
 # [1.2.0](https://github.com/bycedric/docker/compare/1.1.0...1.2.0) (2018-08-02)
 
 
