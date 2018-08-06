@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/bycedric/docker/compare/1.4.0...1.4.1) (2018-08-06)
+
+
+### Bug fixes
+
+* create a new docker image for tag version ([127a0cf](https://github.com/bycedric/docker/commit/127a0cf))
+
 # [1.4.0](https://github.com/bycedric/docker/compare/1.3.3...1.4.0) (2018-08-06)
 
 
