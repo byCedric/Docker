@@ -22,7 +22,11 @@ if [ ! -z "$SONAR_PROJECT" ]; then
 fi
 
 if [ ! -z "$BITBUCKET_BRANCH" ]; then
-	CMD="$CMD -Dsonar.branch.name='$BITBUCKET_BRANCH'"
+	if [ $BITBUCKET_BRANCH = *'/'* ]; then
+		CMD="$CMD -Dsonar.pullrequest.branch='$BITBUCKET_BRANCH'"
+	else
+		CMD="$CMD -Dsonar.branch.name='$BITBUCKET_BRANCH'"
+	fi
 fi
 
 eval "$CMD $@"
