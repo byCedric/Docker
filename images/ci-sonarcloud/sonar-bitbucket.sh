@@ -2,8 +2,6 @@
 CMD="sonar-scanner"
 
 HOST="${SONAR_HOST:-https://sonarcloud.io}"
-ORGANIZATION="${SONAR_ORGANIZATION:-$BITBUCKET_REPO_OWNER}"
-PROJECT="${SONAR_PROJECT:-$BITBUCKET_REPO_SLUG}"
 
 if [ ! -z "$SONAR_TOKEN" ]; then
 	CMD="$CMD -Dsonar.login='$SONAR_TOKEN'"
@@ -15,12 +13,12 @@ if [ ! -z "$HOST" ]; then
 	CMD="$CMD -Dsonar.host.url='$HOST'"
 fi
 
-if [ ! -z "$ORGANIZATION" ]; then
-	CMD="$CMD -Dsonar.organization='$ORGANIZATION'"
+if [ ! -z "$SONAR_ORGANIZATION" ]; then
+	CMD="$CMD -Dsonar.organization='$SONAR_ORGANIZATION'"
 fi
 
-if [ ! -z "$PROJECT" ]; then
-	CMD="$CMD -Dsonar.project='$PROJECT'"
+if [ ! -z "$SONAR_PROJECT" ]; then
+	CMD="$CMD -Dsonar.project='$SONAR_PROJECT'"
 fi
 
 if [ ! -z "$BITBUCKET_BRANCH" ]; then
