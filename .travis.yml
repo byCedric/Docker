@@ -13,6 +13,10 @@ before_install:
   - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
+stages:
+  - Build images
+  - Create release
+
 jobs:
   include:
     - stage: Build images
