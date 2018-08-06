@@ -1,14 +1,18 @@
 ---
 sudo: required
+
 language: node_js
 node_js:
   - node
+
 services:
   - docker
+
 before_install:
   - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
   - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
 jobs:
   include:
     - stage: Build images
@@ -20,3 +24,12 @@ jobs:
     - stage: Build images
       name: laravel
       script: ./scripts/docker-build laravel
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npx semantic-release
+  on:
+    branch: master
+    node: lts/*
