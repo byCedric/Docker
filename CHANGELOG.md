@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/bycedric/docker/compare/1.4.1...1.4.2) (2018-08-06)
+
+
+### Bug fixes
+
+* use multiline string in yaml with new lines ([18c880e](https://github.com/bycedric/docker/commit/18c880e))
+
 ## [1.4.1](https://github.com/bycedric/docker/compare/1.4.0...1.4.1) (2018-08-06)
 
 
