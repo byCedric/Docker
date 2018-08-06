@@ -32,4 +32,4 @@ deploy:
     - npx semantic-release
   on:
     branch: master
-    node: lts/*
+    node: node
