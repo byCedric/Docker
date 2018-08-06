@@ -1,4 +1,14 @@
-## [1.3.1](https://github.com/bycedric/docker/compare/1.3.2...1.3.1) (2018-08-06)
+## [1.3.3](https://github.com/bycedric/docker/compare/1.3.2...1.3.3) (2018-08-06)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** use working expression to detect pull requests ([5229432](https://github.com/bycedric/docker/commit/5229432))
+
+
+### Other chores
+
+* update changelog and version ([8e494d6](https://github.com/bycedric/docker/commit/8e494d6))
 
 
 
