@@ -24,7 +24,7 @@ prepare:
     npmPublish: false
   - path: semantic-release-git-branches
     branchMerges: [develop, master]
-    message: >
+    message: |-
       release: create new version ${nextRelease.version}
 
       ${nextRelease.notes}
