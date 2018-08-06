@@ -5,7 +5,8 @@ HOST="${SONAR_HOST:-https://sonarcloud.io}"
 if [ ! -z "$SONAR_TOKEN" ]; then
 	CMD="$CMD -Dsonar.login='$SONAR_TOKEN'"
 else
-	echo "SonarCloud token not set, please define \$SONAR_TOKEN variable." && exit 1
+	echo "SonarCloud token not set, please define \$SONAR_TOKEN variable."
+	exit 1
 fi
 
 if [ ! -z "$HOST" ]; then
@@ -21,7 +22,7 @@ if [ ! -z "$SONAR_PROJECT" ]; then
 fi
 
 if [ ! -z "$BITBUCKET_BRANCH" ]; then
-	if [ $BITBUCKET_BRANCH = *'/'* ]; then
+	if [ ! -z $(echo $BITBUCKET_BRANCH | grep /) ]; then
 		CMD="$CMD -Dsonar.pullrequest.branch='$BITBUCKET_BRANCH'"
 		CMD="$CMD -Dsonar.pullrequest.key='$BITBUCKET_BRANCH'"
 	else
