@@ -1,6 +1,5 @@
 #!/bin/sh
 CMD="sonar-scanner"
-
 HOST="${SONAR_HOST:-https://sonarcloud.io}"
 
 if [ ! -z "$SONAR_TOKEN" ]; then
