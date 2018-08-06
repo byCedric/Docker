@@ -25,4 +25,4 @@ if [ ! -z "$BITBUCKET_BRANCH" ]; then
 	CMD="$CMD -Dsonar.branch.name='$BITBUCKET_BRANCH'"
 fi
 
-eval $CMD
+eval "$CMD $@"
