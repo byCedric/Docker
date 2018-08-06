@@ -17,6 +17,7 @@ RUN apt-get update \
 # Install additional required PHP extensions
 RUN docker-php-ext-install \
 	gd \
+	pdo_mysql \
 	pdo_sqlite \
 	zip
 
