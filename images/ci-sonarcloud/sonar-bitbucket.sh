@@ -23,6 +23,7 @@ fi
 if [ ! -z "$BITBUCKET_BRANCH" ]; then
 	if [ $BITBUCKET_BRANCH = *'/'* ]; then
 		CMD="$CMD -Dsonar.pullrequest.branch='$BITBUCKET_BRANCH'"
+		CMD="$CMD -Dsonar.pullrequest.key='$BITBUCKET_BRANCH'"
 	else
 		CMD="$CMD -Dsonar.branch.name='$BITBUCKET_BRANCH'"
 	fi
