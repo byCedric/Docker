@@ -24,12 +24,7 @@ jobs:
     - stage: Build images
       name: laravel
       script: ./scripts/docker-build laravel
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script:
-    - npx semantic-release
-  on:
-    branch: master
-    node: node
+    - stage: Create release
+      name: semantic-release
+      script: npx semantic-release
+      if: branch = master
