@@ -1,4 +1,26 @@
-# [1.3.0](https://github.com/bycedric/docker/compare/1.3.1...1.3.0) (2018-08-06)
+## [1.3.1](https://github.com/bycedric/docker/compare/1.3.2...1.3.1) (2018-08-06)
+
+
+
+## [1.3.2](https://github.com/bycedric/docker/compare/1.3.1...1.3.2) (2018-08-06)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** allow extra parameters to pass through ([56f9dad](https://github.com/bycedric/docker/commit/56f9dad))
+* **ci-sonarcloud:** improve pull request support by defining the branch name ([34a0969](https://github.com/bycedric/docker/commit/34a0969))
+* **ci-sonarcloud:** reuse branch name as pull request key ([9a81e32](https://github.com/bycedric/docker/commit/9a81e32))
+* **ci-sonarcloud:** use organization and project if explicitly defined ([0194d09](https://github.com/bycedric/docker/commit/0194d09))
+
+
+### Code style changes
+
+* **ci-sonarcloud:** remove extraneous white line ([05a595a](https://github.com/bycedric/docker/commit/05a595a))
+
+
+### Other chores
+
+* update changelog and version ([8987230](https://github.com/bycedric/docker/commit/8987230))
 
 
 
