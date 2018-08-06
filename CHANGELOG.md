@@ -1,3 +1,28 @@
+# [1.4.0](https://github.com/bycedric/docker/compare/1.3.3...1.4.0) (2018-08-06)
+
+
+### Bug fixes
+
+* create a new release on non-lts versions ([915daf6](https://github.com/bycedric/docker/commit/915daf6))
+* run travis on every release ([24ecc7c](https://github.com/bycedric/docker/commit/24ecc7c))
+
+
+### New features
+
+* implement semantic releases ([cdd00f2](https://github.com/bycedric/docker/commit/cdd00f2))
+
+
+### Other chores
+
+* skip pipelines when creating new releases ([98a88b5](https://github.com/bycedric/docker/commit/98a88b5))
+* update changelog and version ([74f1560](https://github.com/bycedric/docker/commit/74f1560))
+
+
+### Pipeline changes
+
+* explicitly set stage order ([e8281b0](https://github.com/bycedric/docker/commit/e8281b0))
+* reconfigure release with jobs ([d628be6](https://github.com/bycedric/docker/commit/d628be6))
+
 ## [1.3.3](https://github.com/bycedric/docker/compare/1.3.2...1.3.3) (2018-08-06)
 
 
@@ -273,6 +298,3 @@
 * shorten git commit as docker tag ([8522ead](https://github.com/bycedric/docker/commit/8522ead))
 * update travis configuration and fix environment variables ([655f8a4](https://github.com/bycedric/docker/commit/655f8a4))
 * use short commit instead of short tag ([e8dafc3](https://github.com/bycedric/docker/commit/e8dafc3))
-
-
-
