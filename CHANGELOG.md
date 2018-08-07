@@ -1,3 +1,15 @@
+## [1.4.3](https://github.com/bycedric/docker/compare/1.4.2...1.4.3) (2018-08-07)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** reverse project and organization changes ([c7d5882](https://github.com/bycedric/docker/commit/c7d5882))
+
+
+### Code refactors
+
+* **ci-sonarcloud:** remove extra configuration as mentioned in docs ([f079ff6](https://github.com/bycedric/docker/commit/f079ff6))
+
 ## [1.4.2](https://github.com/bycedric/docker/compare/1.4.1...1.4.2) (2018-08-06)
 
 
