@@ -7,3 +7,9 @@ A simple Java image based on Alpine Linux with SonarCloud / SonarScanner preinst
 ## Performance tweaks
 
 - All dependencies are installed and updated within a single `RUN` statement to avoid intermediate containers.
+
+## Java deprecation
+
+Previously the old `java:alpine` image was used as base image.
+But because that image is now deprecated, in favor of `openjdk`, newer builds are using the latter.
+To still use the _old_ java as base image, use `bycedric/ci-sonarcloud:java`.
