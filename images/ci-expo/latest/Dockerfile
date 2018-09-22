@@ -8,5 +8,5 @@ RUN apk add --no-cache \
 		# for Semantic Release (Git over SSH)
 		git \
 		openssh-client \
-	&& npm install -g expo-cli@latest \
+	&& npm install -g expo-cli \
 	&& npm cache rm --force
