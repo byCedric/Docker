@@ -40,7 +40,7 @@ const program = async (batch) => {
 			spinner.succeed(chalk`Built ${identifier}`);
 
 			for (const tag of dockerTags) {
-				const fullTag = tag === version ? version : `${version}-${tag}`;
+				const fullTag = tag === 'latest' ? version : `${version}-${tag}`;
 
 				spinner.start(chalk`Pushing ${identifier} with {bold ${fullTag}}...`);
 				await pushImage(image, version, fullTag);
