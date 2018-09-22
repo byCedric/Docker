@@ -25,6 +25,26 @@ async function sortImages(images, priority) {
 }
 
 /**
+ * Find all versions from a single image.
+ * This will test if there are `Dockerfile`s in the folder.
+ *
+ * @param  {String} path
+ * @return {String[]}
+ */
+async function findImageVersions(path) {
+	const items = await readdir(`${path}`);
+	const dockerItems = await Promise.all(
+		items.map(item => (
+			access(`${path}/${item}/Dockerfile`)
+				.then(() => item)
+				.catch(() => '')
+		))
+	);
+
+	return dockerItems.filter(item => !!item);
+}
+
+/**
  * Find all docker files in the images directory.
  * Optionally, you can provide a (starting) pattern and a priority list of images.
  *
@@ -34,21 +54,16 @@ async function sortImages(images, priority) {
  */
 async function findImages(pattern = '', priorities = []) {
 	const path = resolve(__dirname, '../images');
-	const items = (await readdir(path)).filter(item => item.startsWith(pattern));
-	const dockerItems = await Promise.all(
-		items.map(item => (
-			access(`${path}/${item}/Dockerfile`)
-				.then(() => item)
-				.catch(() => '')
-		))
+	const images = (await readdir(path)).filter(item => item.startsWith(pattern));
+	const versions = await Promise.all(
+		images.map(async (image) => ({
+			name: image,
+			path: `${path}/${image}`,
+			versions: await findImageVersions(`${path}/${image}`),
+		}))
 	);
 
-	return sortImages(
-		dockerItems
-			.filter(item => !!item)
-			.map(name => ({ name, path: `${path}/${name}` })),
-		priorities
-	);
+	return sortImages(versions, priorities);
 }
 
 /**
@@ -56,22 +71,27 @@ async function findImages(pattern = '', priorities = []) {
  * After this, you should push the image with a specific tag.
  *
  * @param  {Object} image
- * @param  {String} tag
+ * @param  {String} image.path
+ * @param  {String} image.name
+ * @param  {String} version
  * @return {void}
  */
-async function buildImage(image) {
-	await execa('docker', ['build', '-t', `bycedric/${image.name}:new`, image.path]);
+async function buildImage(image, version) {
+	await execa('docker', ['build', '-t', `bycedric/${image.name}:${version}-new`, `${image.path}/${version}`]);
 }
 
 /**
  * Push the (new) image to the registery using a specific tag.
  *
  * @param  {Object} image
+ * @param  {String} image.path
+ * @param  {String} image.name
+ * @param  {Object} version
  * @param  {String} tag
  * @return {void}
  */
-async function pushImage(image, tag) {
-	await execa('docker', ['tag', `bycedric/${image.name}:new`, `bycedric/${image.name}:${tag}`]);
+async function pushImage(image, version, tag) {
+	await execa('docker', ['tag', `bycedric/${image.name}:${version}-new`, `bycedric/${image.name}:${tag}`]);
 	await execa('docker', ['push', `bycedric/${image.name}:${tag}`]);
 }
 
