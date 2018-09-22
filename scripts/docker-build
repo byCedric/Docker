@@ -8,8 +8,7 @@ const { findImages, buildImage, pushImage } = require('./util-docker');
 const { logInfo, logError } = require('./util-output');
 
 const branchToTag = {
-	develop: 'develop',
-	master: 'latest',
+	develop: 'test',
 };
 
 const spinner = ora();
@@ -23,22 +22,34 @@ const program = async (batch) => {
 		branchToTag[process.env.BRANCH],
 	].filter(name => !!name);
 
+	// create non-added tags for master branch, e.g. `latest` instead of `latest-test`
+	if (process.env.BRANCH === 'master') {
+		dockerTags.push('');
+	}
+
 	spinner.stop();
 	logInfo(
 		chalk`Found {bold ${dockerImages.length} images}`,
 		...dockerImages.map(
-			(image, index) => chalk`  {dim ${index + 1}. {underline ${image.name}}}`
+			(image, index) => chalk`  {dim ${index + 1}. {underline ${image.name}} (${image.versions.length}x)}`
 		)
 	);
 
 	for (const image of dockerImages) {
-		spinner.start(chalk`Building {bold ${image.name}}...`);
-		await buildImage(image);
-		spinner.succeed(chalk`Built {bold ${image.name}}`);
-		for (const tag of dockerTags) {
-			spinner.start(chalk`Pushing {bold ${image.name}} with {bold ${tag}}...`);
-			await pushImage(image, tag);
-			spinner.succeed(chalk`Pushed {bold ${image.name}} with {bold ${tag}}`);
+		for (const version of image.versions) {
+			const identifier = chalk`{bold ${image.name}} #{underline ${version}}`;
+
+			spinner.start(`Building ${identifier}...`);
+			await buildImage(image, version);
+			spinner.succeed(chalk`Built ${identifier}`);
+
+			for (const tag of dockerTags) {
+				const fullTag = !tag ? version : `${version}-${tag}`;
+
+				spinner.start(chalk`Pushing ${identifier} with {bold ${fullTag}}...`);
+				await pushImage(image, version, fullTag);
+				spinner.succeed(chalk`Pushed ${identifier} with {bold ${fullTag}}`);
+			}
 		}
 	}
 };
