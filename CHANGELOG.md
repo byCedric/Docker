@@ -1,3 +1,15 @@
+## [1.4.4](https://github.com/bycedric/docker/compare/1.4.3...1.4.4) (2018-09-22)
+
+
+### Code refactors
+
+* add versions layer to images ([#3](https://github.com/bycedric/docker/issues/3)) ([b352fe3](https://github.com/bycedric/docker/commit/b352fe3))
+
+
+### Other chores
+
+* add github templates for accessible contributions ([#2](https://github.com/bycedric/docker/issues/2)) ([93b04ea](https://github.com/bycedric/docker/commit/93b04ea))
+
 ## [1.4.3](https://github.com/bycedric/docker/compare/1.4.2...1.4.3) (2018-08-07)
 
 
