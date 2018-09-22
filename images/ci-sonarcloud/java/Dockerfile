@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM java:alpine
 
 LABEL maintainer 'Cedric van Putten <me@bycedric.com>'
 
