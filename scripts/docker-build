@@ -9,6 +9,7 @@ const { logInfo, logError } = require('./util-output');
 
 const branchToTag = {
 	develop: 'test',
+	master: 'latest',
 };
 
 const spinner = ora();
@@ -21,11 +22,6 @@ const program = async (batch) => {
 		process.env.TRAVIS_TAG,
 		branchToTag[process.env.BRANCH],
 	].filter(name => !!name);
-
-	// create non-added tags for master branch, e.g. `latest` instead of `latest-test`
-	if (process.env.BRANCH === 'master') {
-		dockerTags.push('');
-	}
 
 	spinner.stop();
 	logInfo(
@@ -44,7 +40,7 @@ const program = async (batch) => {
 			spinner.succeed(chalk`Built ${identifier}`);
 
 			for (const tag of dockerTags) {
-				const fullTag = !tag ? version : `${version}-${tag}`;
+				const fullTag = tag === version ? version : `${version}-${tag}`;
 
 				spinner.start(chalk`Pushing ${identifier} with {bold ${fullTag}}...`);
 				await pushImage(image, version, fullTag);
