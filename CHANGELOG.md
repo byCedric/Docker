@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/bycedric/docker/compare/1.4.4...1.5.0) (2018-09-22)
+
+
+### New features
+
+* **ci-sonarcloud:** add new openjdk versions ([#4](https://github.com/bycedric/docker/issues/4)) ([a992007](https://github.com/bycedric/docker/commit/a992007))
+
 ## [1.4.4](https://github.com/bycedric/docker/compare/1.4.3...1.4.4) (2018-09-22)
 
 
