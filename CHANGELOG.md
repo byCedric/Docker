@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/bycedric/docker/compare/1.5.1...1.5.2) (2018-10-11)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** resolve sonar binary and fix apk del issue ([#7](https://github.com/bycedric/docker/issues/7)) ([1930253](https://github.com/bycedric/docker/commit/1930253))
+
 ## [1.5.1](https://github.com/bycedric/docker/compare/1.5.0...1.5.1) (2018-10-11)
 
 
