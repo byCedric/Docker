@@ -1,3 +1,15 @@
+## [1.5.1](https://github.com/bycedric/docker/compare/1.5.0...1.5.1) (2018-10-11)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** use new cdn with explicit platform for sonar scanner cli ([#5](https://github.com/bycedric/docker/issues/5)) ([4d16d2a](https://github.com/bycedric/docker/commit/4d16d2a))
+
+
+### Code refactors
+
+* remove old build script ([be41388](https://github.com/bycedric/docker/commit/be41388))
+
 # [1.5.0](https://github.com/bycedric/docker/compare/1.4.4...1.5.0) (2018-09-22)
 
 
