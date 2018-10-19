@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/bycedric/docker/compare/1.5.2...1.6.0) (2018-10-19)
+
+
+### New features
+
+* **serve-laravel:** add gmp to support hash ids out of the box ([a179c9f](https://github.com/bycedric/docker/commit/a179c9f))
+
 ## [1.5.2](https://github.com/bycedric/docker/compare/1.5.1...1.5.2) (2018-10-11)
 
 
