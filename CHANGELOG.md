@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/bycedric/docker/compare/1.6.0...1.7.0) (2018-10-25)
+
+
+### New features
+
+* **laravel-test:** add bcmath to support laravel telescope ([b881658](https://github.com/bycedric/docker/commit/b881658))
+* **serve-laravel:** add bcmath to support laravel telescope ([4006bc8](https://github.com/bycedric/docker/commit/4006bc8))
+
 # [1.6.0](https://github.com/bycedric/docker/compare/1.5.2...1.6.0) (2018-10-19)
 
 
