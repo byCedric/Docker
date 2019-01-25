@@ -21,6 +21,7 @@ RUN apk add --no-cache \
 	php7-session \
 	php7-tokenizer \
 	php7-xml \
+	php7-soap \
 	supervisor
 
 COPY ./nginx-laravel.conf /etc/nginx/conf.d/sites-template/laravel.conf
