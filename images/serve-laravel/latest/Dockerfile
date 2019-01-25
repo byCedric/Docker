@@ -19,9 +19,9 @@ RUN apk add --no-cache \
 	php7-pdo_mysql \
 	php7-pdo_sqlite \
 	php7-session \
+	php7-soap \
 	php7-tokenizer \
 	php7-xml \
-	php7-soap \
 	supervisor
 
 COPY ./nginx-laravel.conf /etc/nginx/conf.d/sites-template/laravel.conf
