@@ -1,3 +1,25 @@
+# [1.8.0](https://github.com/bycedric/docker/compare/1.7.0...1.8.0) (2019-01-28)
+
+
+### Bug fixes
+
+* **ci-node:** add missing git for forked dependencies ([#10](https://github.com/bycedric/docker/issues/10)) ([6d9307e](https://github.com/bycedric/docker/commit/6d9307e))
+
+
+### Code refactors
+
+* **serve-laravel:** sort php packages alphabetically ([c9051b7](https://github.com/bycedric/docker/commit/c9051b7))
+
+
+### New features
+
+* **serve-laravel:** add support for php7 soap ([#8](https://github.com/bycedric/docker/issues/8)) ([b3fc7ff](https://github.com/bycedric/docker/commit/b3fc7ff))
+
+
+### Pipeline changes
+
+* fix docker login script directly using password ([d74a8a0](https://github.com/bycedric/docker/commit/d74a8a0))
+
 # [1.7.0](https://github.com/bycedric/docker/compare/1.6.0...1.7.0) (2018-10-25)
 
 
