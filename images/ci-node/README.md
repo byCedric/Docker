@@ -2,6 +2,10 @@
 
 A simple Node image based on Alpine Linux, CI/CD environments.
 
+## Dependencies
+
+- `Git` is added to allow forked-dependencies.
+
 ## Performance tweaks
 
 - All dependencies are installed and updated within a single `RUN` statement to avoid intermediate containers.
