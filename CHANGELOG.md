@@ -1,3 +1,20 @@
+# [1.9.0](https://github.com/bycedric/docker/compare/1.8.0...1.9.0) (2019-02-11)
+
+
+### Bug fixes
+
+* update dependencies to fix lodash security issue ([5ff3fe5](https://github.com/bycedric/docker/commit/5ff3fe5))
+
+
+### Documentation changes
+
+* **ci-heroku:** add usage info and warning about entrypoint ([d5f31b0](https://github.com/bycedric/docker/commit/d5f31b0))
+
+
+### New features
+
+* **ci-heroku:** add heroku image for ci deployments ([7885f36](https://github.com/bycedric/docker/commit/7885f36))
+
 # [1.8.0](https://github.com/bycedric/docker/compare/1.7.0...1.8.0) (2019-01-28)
 
 
