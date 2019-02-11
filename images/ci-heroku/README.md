@@ -2,6 +2,15 @@
 
 A simple Heroku image based on Alpine Linux and Docker-in-Docker for CI/CD environments.
 
+> The image doesn't have the Heroku CLI as entrypoint because this caused some issues in GitLab CI environments.
+
+## Usage
+
+```
+$ docker run --rm -e HEROKU_API_KEY="MY_KEY" bycedric/ci-heroku heroku whoami
+$ docker run --rm -v ~/.netrc:/root/.netrc:ro bycedric/ci-heroku heroku whoami
+```
+
 ## Dependencies
 
 - `Bash` is added for Heroku CLI.
