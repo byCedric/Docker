@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/bycedric/docker/compare/1.9.0...1.10.0) (2019-02-12)
+
+
+### New features
+
+* **ci-heroku:** add edge version with built in slack support ([22a76b5](https://github.com/bycedric/docker/commit/22a76b5))
+
 # [1.9.0](https://github.com/bycedric/docker/compare/1.8.0...1.9.0) (2019-02-11)
 
 
