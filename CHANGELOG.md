@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/bycedric/docker/compare/1.10.0...1.10.1) (2019-03-01)
+
+
+### Code refactors
+
+* **ci-heroku:** finetune the prebuilt slack messages ([4eb33ec](https://github.com/bycedric/docker/commit/4eb33ec))
+
 # [1.10.0](https://github.com/bycedric/docker/compare/1.9.0...1.10.0) (2019-02-12)
 
 
