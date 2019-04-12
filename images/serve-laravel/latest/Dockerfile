@@ -10,6 +10,7 @@ RUN apk add --no-cache \
 	php7-dom \
 	php7-fileinfo \
 	php7-fpm \
+	php7-gd \
 	php7-gmp \
 	php7-iconv \
 	php7-json \
