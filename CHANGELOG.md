@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/bycedric/docker/compare/1.10.1...1.10.2) (2019-04-12)
+
+
+### Bug fixes
+
+* **serve-laravel:** add missing php gd extension by default ([#11](https://github.com/bycedric/docker/issues/11)) ([749de50](https://github.com/bycedric/docker/commit/749de50))
+
 ## [1.10.1](https://github.com/bycedric/docker/compare/1.10.0...1.10.1) (2019-03-01)
 
 
