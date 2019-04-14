@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/bycedric/docker/compare/1.10.2...1.10.3) (2019-04-14)
+
+
+### Code refactors
+
+* deprecate ci-expo image in favor of new expo github actions ([#12](https://github.com/bycedric/docker/issues/12)) ([cb75d82](https://github.com/bycedric/docker/commit/cb75d82))
+
 ## [1.10.2](https://github.com/bycedric/docker/compare/1.10.1...1.10.2) (2019-04-12)
 
 
