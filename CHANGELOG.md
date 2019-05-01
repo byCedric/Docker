@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/bycedric/docker/compare/1.11.0...1.11.1) (2019-05-01)
+
+
+### Bug fixes
+
+* **ci-heroku:** add missing bitbucket workspace and specify the source ([63adf8d](https://github.com/bycedric/docker/commit/63adf8d))
+
 # [1.11.0](https://github.com/bycedric/docker/compare/1.10.3...1.11.0) (2019-05-01)
 
 
