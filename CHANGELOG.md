@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/bycedric/docker/compare/1.10.3...1.11.0) (2019-05-01)
+
+
+### New features
+
+* **ci-heroku:** add bitbucket slack support ([96d2e58](https://github.com/bycedric/docker/commit/96d2e58))
+
 ## [1.10.3](https://github.com/bycedric/docker/compare/1.10.2...1.10.3) (2019-04-14)
 
 
