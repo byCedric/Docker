@@ -1,4 +1,6 @@
-# Node - Continuous Integration
+# [DEPRECATED] Node - Continuous Integration
+
+> Node's images already contains optimizations for fast CI environments, there is no need for this anymore.
 
 A simple Node image based on Alpine Linux, CI/CD environments.
 
