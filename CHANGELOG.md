@@ -1,3 +1,12 @@
+## [1.11.2](https://github.com/bycedric/docker/compare/1.11.1...1.11.2) (2019-05-08)
+
+
+### Code refactors
+
+* deprecate ci-node image in favor of vendor images ([63c1592](https://github.com/bycedric/docker/commit/63c1592))
+* **ci-sonarcloud:** add support for typescript ([186373f](https://github.com/bycedric/docker/commit/186373f))
+* **ci-sonarcloud:** upgrade to latest sonar scanner 3.3.0.1492 ([2b4fe19](https://github.com/bycedric/docker/commit/2b4fe19))
+
 ## [1.11.1](https://github.com/bycedric/docker/compare/1.11.0...1.11.1) (2019-05-01)
 
 
