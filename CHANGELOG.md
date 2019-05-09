@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/bycedric/docker/compare/1.11.2...1.11.3) (2019-05-09)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** explicitly define the node path for typescript ([2d4d580](https://github.com/bycedric/docker/commit/2d4d580))
+
 ## [1.11.2](https://github.com/bycedric/docker/compare/1.11.1...1.11.2) (2019-05-08)
 
 
