@@ -15,4 +15,6 @@ RUN apk add --no-cache git nodejs nodejs-npm wget \
 COPY sonar-bitbucket.sh /usr/sbin/sonar-bitbucket
 RUN chmod +x /usr/sbin/sonar-bitbucket
 
-CMD ["sh", "-c", "sonar-scanner -Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_TOKEN"]
+ENV NODE_PATH "/usr/lib/node_modules/"
+
+CMD ["sh", "-c", "git fetch; sonar-scanner -Dsonar.host.url=$SONAR_URL -Dsonar.login=$SONAR_TOKEN"]
