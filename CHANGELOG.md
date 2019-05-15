@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/bycedric/docker/compare/1.11.3...1.12.0) (2019-05-15)
+
+
+### New features
+
+* **ci-sonarcloud:** add support for typescript in latest image ([b6dd3a6](https://github.com/bycedric/docker/commit/b6dd3a6))
+
 ## [1.11.3](https://github.com/bycedric/docker/compare/1.11.2...1.11.3) (2019-05-09)
 
 
