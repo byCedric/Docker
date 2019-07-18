@@ -1,3 +1,16 @@
+# [1.13.0](https://github.com/bycedric/docker/compare/1.12.0...1.13.0) (2019-07-18)
+
+
+### New features
+
+* **laravel-test:** add upgraded laravel test images ([#18](https://github.com/bycedric/docker/issues/18)) ([8ae34e1](https://github.com/bycedric/docker/commit/8ae34e1))
+
+
+### Other chores
+
+* **deps:** bump handlebars from 4.1.0 to 4.1.2 ([#15](https://github.com/bycedric/docker/issues/15)) ([557f96a](https://github.com/bycedric/docker/commit/557f96a))
+* **deps:** bump js-yaml from 3.12.1 to 3.13.1 ([#14](https://github.com/bycedric/docker/issues/14)) ([51cf5dc](https://github.com/bycedric/docker/commit/51cf5dc))
+
 # [1.12.0](https://github.com/bycedric/docker/compare/1.11.3...1.12.0) (2019-05-15)
 
 
