@@ -11,7 +11,7 @@ RUN apt-get update \
 		gnupg \
 		libpng-dev \
 		libsqlite3-dev \
-		unzip \
+		libzip-dev \
 	&& apt-get autoremove -y
 
 # Install additional required PHP extensions
