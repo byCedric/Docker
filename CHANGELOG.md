@@ -1,3 +1,24 @@
+## [1.13.1](https://github.com/bycedric/docker/compare/1.13.0...1.13.1) (2020-01-06)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** add unsafe npm permissions to sonar ([#22](https://github.com/bycedric/docker/issues/22)) ([fa6b241](https://github.com/bycedric/docker/commit/fa6b241))
+
+
+### Code refactors
+
+* **ci-sonarcloud:** upgrade scanner version to 4.1.0.1829 ([#20](https://github.com/bycedric/docker/issues/20)) ([a7dc184](https://github.com/bycedric/docker/commit/a7dc184))
+
+
+### Other chores
+
+* **deps:** bump handlebars from 4.1.2 to 4.5.3 ([#21](https://github.com/bycedric/docker/issues/21)) ([77571a7](https://github.com/bycedric/docker/commit/77571a7))
+* **deps:** bump lodash from 4.17.11 to 4.17.14 ([#17](https://github.com/bycedric/docker/issues/17)) ([56c9fcf](https://github.com/bycedric/docker/commit/56c9fcf))
+* **deps:** bump lodash.template from 4.4.0 to 4.5.0 ([#16](https://github.com/bycedric/docker/issues/16)) ([28643c0](https://github.com/bycedric/docker/commit/28643c0))
+* **deps:** bump marked from 0.6.0 to 0.6.2 ([#13](https://github.com/bycedric/docker/issues/13)) ([543e7f3](https://github.com/bycedric/docker/commit/543e7f3))
+* **deps:** bump mixin-deep from 1.3.1 to 1.3.2 ([#19](https://github.com/bycedric/docker/issues/19)) ([4447ce5](https://github.com/bycedric/docker/commit/4447ce5))
+
 # [1.13.0](https://github.com/bycedric/docker/compare/1.12.0...1.13.0) (2019-07-18)
 
 
