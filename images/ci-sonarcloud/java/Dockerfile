@@ -2,7 +2,7 @@ FROM java:alpine
 
 LABEL maintainer 'Cedric van Putten <me@bycedric.com>'
 
-ENV SONAR_SCANNER_VERSION 4.1.0.1829
+ENV SONAR_SCANNER_VERSION 4.2.0.1873
 ENV SONAR_URL https://sonarcloud.io
 
 RUN apk add --no-cache git nodejs wget \
