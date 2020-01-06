@@ -1,11 +1,12 @@
-FROM openjdk:alpine
+FROM openjdk:14-alpine
 
 LABEL maintainer 'Cedric van Putten <me@bycedric.com>'
 
-ENV SONAR_SCANNER_VERSION 3.3.0.1492
+ENV SONAR_SCANNER_VERSION 4.1.0.1829
 ENV SONAR_URL https://sonarcloud.io
 
 RUN apk add --no-cache git nodejs nodejs-npm wget \
+	# required to avoid unset root issue https://stackoverflow.com/questions/52196518/could-not-get-uid-gid-when-building-node-docker#answer-52196681
 	&& npm config set unsafe-perm true \
 	&& npm install --global typescript \
 	&& wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip \
