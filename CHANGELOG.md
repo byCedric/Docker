@@ -1,3 +1,10 @@
+## [1.13.2](https://github.com/bycedric/docker/compare/1.13.1...1.13.2) (2020-01-06)
+
+
+### Code refactors
+
+* **ci-sonarcloud:** update sonar scanner to 4.2.0.1873 ([#23](https://github.com/bycedric/docker/issues/23)) ([42aa99b](https://github.com/bycedric/docker/commit/42aa99b))
+
 ## [1.13.1](https://github.com/bycedric/docker/compare/1.13.0...1.13.1) (2020-01-06)
 
 
