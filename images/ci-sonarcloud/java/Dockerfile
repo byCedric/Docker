@@ -6,6 +6,7 @@ ENV SONAR_SCANNER_VERSION 4.1.0.1829
 ENV SONAR_URL https://sonarcloud.io
 
 RUN apk add --no-cache git nodejs wget \
+	&& npm config set unsafe-perm true \
 	&& wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip \
 	&& unzip sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip \
 	&& cd /usr/bin && ln -s /sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner sonar-scanner \
