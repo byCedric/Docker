@@ -1,4 +1,4 @@
-FROM openjdk:14-alpine
+FROM openjdk:13-alpine
 
 LABEL maintainer 'Cedric van Putten <me@bycedric.com>'
 
