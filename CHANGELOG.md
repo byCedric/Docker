@@ -1,3 +1,10 @@
+## [1.13.3](https://github.com/bycedric/docker/compare/1.13.2...1.13.3) (2020-02-04)
+
+
+### Bug fixes
+
+* **ci-sonarcloud:** use previous jdk version with support for pack200 ([#24](https://github.com/bycedric/docker/issues/24)) ([60a9280](https://github.com/bycedric/docker/commit/60a9280))
+
 ## [1.13.2](https://github.com/bycedric/docker/compare/1.13.1...1.13.2) (2020-01-06)
 
 
